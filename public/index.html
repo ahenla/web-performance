@@ -3,16 +3,17 @@
   <head>
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="./background.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap"
       rel="stylesheet"
     />
-    <link rel="preload" href="./gallery/ancient-greece.png" as="image" />
     <link
       rel="preload"
       href="https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyeAZJhiI2B.woff2"
       as="font"
     />
+    <link rel="preload" href="./gallery/ancient-greece.png" as="image" />
     <script src="script.js" defer></script>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -23,6 +24,24 @@
     <h1>
       <img src="images/logo.png" alt="Frontend Masters Museum" width="300" />
     </h1>
-    <main></main>
+    <main>
+      <article>
+        <h2>Life in Ancient Greek</h2>
+        <p>
+          Uncover the world of ancient Greece through the sculptures, tools, and
+          jewelry found in ruins from over 2000 years ago that have been
+          unearthed through modern science and technology.
+        </p>
+        <picture>
+          <source type="image/webp" src="./gallery/ancient-greece.webp" />
+          <img
+            src="gallery/ancient-greece.png"
+            fetchpriority="high"
+            decoding="sync"
+          />
+        </picture>
+      </article>
+      `;
+    </main>
   </body>
 </html>
