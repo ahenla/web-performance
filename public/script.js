@@ -1,3 +1,13 @@
+const obs = new PerformanceObserver((list) => {
+  const entries = list.getEntries();
+  console.log(entries);
+});
+obs.observe({
+  entryTypes: ["largest-contentful-paint", "layout-shift", "first-input"],
+  buffered: true,
+});
+//buffered true send a signal even if the event already happened
+
 async function load() {
   const response = await fetch("gallery/data.json");
   const data = await response.json();
